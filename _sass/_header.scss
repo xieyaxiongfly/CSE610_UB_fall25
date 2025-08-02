@@ -5,7 +5,7 @@
     border-top: 0px solid $grey-color-dark;
 	border-bottom: 6px solid $clemson-orange;
     min-height: 56px;
-    background-color: $clemson-purple;
+    background-color: transparent;
     // Positioning context for the mobile navigation icon
     position: relative;
 }
@@ -16,13 +16,13 @@
 }
 
 .site-title, .site-title a {
-    font-size: 26px;
+    font-size: 24px;
 /* 		margin-top: 15px;
     line-height: 40px; */
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-    font-weight: 500;
+    font-weight: 700;
 		font-family: 'Titillium Web', sans-serif;
     color: $header-text-color;
     &,
@@ -46,10 +46,10 @@
 
 .site-nav ul {
 
-	text-align: right;
-	float: right;
+	text-align: left;
+	float: left;
 	padding-top: 9px;
-	font-size: 85%;
+	font-size: 16px;
 	letter-spacing: 1px;
 	line-height: 1em;
 	font-weight: 600;
@@ -66,7 +66,7 @@
 	display: inline-block;
 	height: 23px;
 	line-height: normal;
-	margin: 12px 0 0 20px;
+	margin: 12px 15px 0 0;
 	padding: 0 0 2px 0;
 	position: relative;
 	vertical-align: top;
@@ -75,6 +75,29 @@
 .site-nav a {
 	display: block;
         color: $header-text-color;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        &:hover {
+            color: $primary-color;
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: $primary-color;
+            transition: width 0.3s ease;
+        }
+        
+        &:hover:before {
+            width: 100%;
+        }
 }
 
 /* Sub Menu */
@@ -151,8 +174,9 @@ z-index:999;
 
 
 .site-nav {
-    float: right;
+    float: left;
     line-height: 40px;
+    margin-left: 20px;
 
 
     .menu-icon {
@@ -161,12 +185,38 @@ z-index:999;
 
     .page-link {
         color: $header-text-color;
-    background: $clemson-purple;
+        background: transparent;
         line-height: $base-line-height;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        text-decoration: none;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 20px;
+            margin-left: 15px;
+        }
+        
+        &:hover {
+            color: $primary-color;
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: $primary-color;
+            transition: width 0.3s ease;
+        }
+        
+        &:hover:before {
+            width: 100%;
         }
     }
 
