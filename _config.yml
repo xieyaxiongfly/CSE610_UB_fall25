@@ -9,6 +9,10 @@ url: "https://xieyaxiongfly.github.io" # the base hostname & protocol for your s
 schoolname: "University at Buffalo, SUNY"
 schoolurl: "https://buffalo.edu" 
 
+# Logo configuration
+logo_path: "/_images/UB_logo.jpg"
+logo_width: 75
+
 address: |
     Computer Science and Engineering
     University at Buffalo, SUNY
