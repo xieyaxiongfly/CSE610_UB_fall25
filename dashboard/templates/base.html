@@ -95,6 +95,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ url_for('events') }}" class="nav-link {% if request.endpoint == 'events' %}active{% endif %}">
+                                <i class="fas fa-calendar-check me-2"></i>Events & Deadlines
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ url_for('people') }}" class="nav-link {% if request.endpoint == 'people' %}active{% endif %}">
                                 <i class="fas fa-users me-2"></i>People
                             </a>
