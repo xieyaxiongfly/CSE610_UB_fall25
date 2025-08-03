@@ -74,9 +74,16 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid #e0e0e0;
     padding: $spacing-unit 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.site-footer .wrapper {
+    background: transparent;
+    padding: 25px 30px 20px 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .footer-heading {
@@ -329,8 +336,6 @@ article ul#archive > li:before {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
     gap: 20px;
 }
 
